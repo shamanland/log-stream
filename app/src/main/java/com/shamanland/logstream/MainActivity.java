@@ -25,6 +25,12 @@ public class MainActivity extends ActionBarActivity {
         }
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+
+        new ExampleTask(getResources()).execute();
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
